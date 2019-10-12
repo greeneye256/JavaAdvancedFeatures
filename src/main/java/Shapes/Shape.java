@@ -2,7 +2,7 @@ package Shapes;
 
 import java.io.IOException;
 
-public abstract class Shape implements Colorable{
+public abstract class Shape implements Colorable {
 
     public void render(){
         System.out.println("Draw circle");
@@ -60,6 +60,10 @@ public abstract class Shape implements Colorable{
 
     Shape(){
         System.out.println("Shape constructor");
+    }
+
+    public Shape(int colorCode) {
+        this.colorCode = colorCode;
     }
 
     public static class ShapeException extends IOException{}

@@ -2,8 +2,10 @@ package Shapes;
 
 import VehicleExercise.Car;
 
-public class Circle extends Shape implements Colorable{
-    private Point center;
+import java.io.Serializable;
+
+public class Circle extends Shape implements Colorable, Serializable {
+    private transient Point center;
     private double radius;
 
 
@@ -33,5 +35,13 @@ public class Circle extends Shape implements Colorable{
     @Override
     public double area() throws ShapeException {
         return Math.PI * this.radius * this.radius;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "center=" + center +
+                ", radius=" + radius +
+                '}';
     }
 }

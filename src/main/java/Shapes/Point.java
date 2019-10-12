@@ -1,8 +1,10 @@
 package Shapes;
 
+import java.io.Serializable;
+
 import static Collections.Utils.getThisDistanceToOrigin;
 
-public class Point implements Comparable{
+public class Point implements Comparable {
 
     private double x;
     private double y;
